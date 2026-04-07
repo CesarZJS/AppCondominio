@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:gravity="center_horizontal"
+    android:background="@color/white">
+
+    <!-- Logo o Título Principal -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Condominios"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:gravity="center"
+        android:layout_marginTop="60dp"
+        android:layout_marginBottom="8dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Gestión Residencial"
+        android:textSize="18sp"
+        android:textColor="@color/black"
+        android:gravity="center"
+        android:layout_marginBottom="48dp"/>
+
+    <!-- Título de selección -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Selecciona tu Rol"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:layout_marginBottom="32dp"/>
+
+    <!-- Opción Propietario -->
+    <LinearLayout
+        android:id="@+id/layoutPropietario"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:textColor="@color/black"
+        android:background="@drawable/border_seleccion_login"
+        android:padding="16dp"
+        android:layout_marginBottom="16dp"
+        android:clickable="true"
+        android:focusable="true">
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_home"
+            android:layout_gravity="center_vertical"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Propietario"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:layout_marginStart="12dp"
+            android:layout_gravity="center_vertical"/>
+    </LinearLayout>
+
+    <!-- Opción Inquilino -->
+    <LinearLayout
+        android:id="@+id/layoutInquilino"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@drawable/border_seleccion_login"
+        android:padding="16dp"
+        android:layout_marginBottom="16dp"
+        android:clickable="true"
+        android:focusable="true">
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_home"
+            android:layout_gravity="center_vertical"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Inquilino"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:layout_marginStart="12dp"
+            android:layout_gravity="center_vertical"/>
+    </LinearLayout>
+
+    <!-- Opción Administrador -->
+    <LinearLayout
+        android:id="@+id/layoutAdministrador"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@drawable/border_seleccion_login"
+        android:padding="16dp"
+        android:layout_marginBottom="48dp"
+        android:clickable="true"
+        android:focusable="true">
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_home"
+            android:layout_gravity="center_vertical"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Administrador"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:layout_marginStart="12dp"
+            android:layout_gravity="center_vertical"/>
+    </LinearLayout>
+
+    <!-- Botón Continuar -->
+    <Button
+        android:id="@+id/btnContinuar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:text="Continuar"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:backgroundTint="@color/color_cabecera"
+        android:textColor="@color/white"
+        app:cornerRadius="8dp"/>
+
+    <!-- Espacio flexible al final -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+</LinearLayout>

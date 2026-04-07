@@ -1,14 +1,470 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white">
+    android:background="#F5F5F5">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="Pantalla de Reservas"
-        android:textSize="24sp" />
+        android:orientation="vertical"
+        android:padding="16dp">
 
-</FrameLayout>
+        <!-- Header del Condominio -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/white"
+            android:padding="20dp"
+            android:layout_marginBottom="16dp"
+            android:elevation="2dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Condominio Los Álamos"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="#2C3E50" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Torre: A - 502"
+                android:textSize="14sp"
+                android:textColor="#7F8C8D"
+                android:layout_marginTop="4dp" />
+
+        </LinearLayout>
+
+        <!-- Título Nueva Reserva -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nueva Reserva"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="#2C3E50"
+            android:layout_marginBottom="20dp" />
+
+        <!-- Sección: Tipo de Área -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Selecciona el área"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#2C3E50"
+            android:layout_marginBottom="12dp" />
+
+        <!-- Opciones de áreas -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="24dp">
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardPiscina"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:cardBackgroundColor="@color/white"
+
+                android:layout_marginEnd="8dp"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="2dp"
+                android:clickable="true"
+                android:focusable="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:padding="16dp">
+
+                    <ImageView
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:src="@drawable/ic_home"
+                        android:tint="#7F8C8D" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Piscina \n"
+                        android:textSize="14sp"
+                        android:textColor="#2C3E50"
+                        android:layout_marginTop="8dp" />
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardBBQ"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="4dp"
+                app:cardBackgroundColor="@color/white"
+
+                android:layout_marginEnd="4dp"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="2dp"
+                android:clickable="true"
+                android:focusable="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:padding="16dp">
+
+                    <ImageView
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:src="@drawable/ic_home"
+                        android:tint="#7F8C8D" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Zona BBQ \n"
+                        android:textSize="14sp"
+                        android:textColor="#2C3E50"
+                        android:layout_marginTop="8dp" />
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardSalon"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@color/white"
+
+                android:layout_weight="1"
+                android:layout_marginStart="8dp"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="2dp"
+                android:clickable="true"
+                android:focusable="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:padding="16dp">
+
+                    <ImageView
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:src="@drawable/ic_home"
+                        android:tint="#7F8C8D" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Salón de Eventos"
+                        android:textSize="14sp"
+                        android:textColor="#2C3E50"
+                        android:layout_marginTop="8dp"
+                        android:textAlignment="center"/>
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+
+        <!-- Calendario -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Selecciona la fecha"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#2C3E50"
+            android:layout_marginBottom="12dp" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="8dp"
+
+
+            app:cardBackgroundColor="@color/white"
+            app:cardElevation="2dp"
+            android:layout_marginBottom="24dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <!-- Mes y Año -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:layout_marginBottom="16dp">
+
+                    <ImageButton
+                        android:id="@+id/btnPrevMonth"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/ic_left_calendario"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:contentDescription="Mes anterior" />
+
+                    <TextView
+                        android:id="@+id/tvMonthYear"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Marzo 2026"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:textColor="#2C3E50"
+                        android:gravity="center" />
+
+                    <ImageButton
+                        android:id="@+id/btnNextMonth"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/ic_right_calendar"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:contentDescription="Mes siguiente" />
+
+                </LinearLayout>
+
+                <!-- Días de la semana -->
+                <GridLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:columnCount="7"
+                    android:rowCount="1"
+                    android:layout_marginBottom="8dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_columnWeight="1"
+                        android:text="Lu"
+                        android:gravity="center"
+                        android:textSize="14sp"
+                        android:textColor="#7F8C8D"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_columnWeight="1"
+                        android:text="Ma"
+                        android:gravity="center"
+                        android:textSize="14sp"
+                        android:textColor="#7F8C8D"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_columnWeight="1"
+                        android:text="Mi"
+                        android:gravity="center"
+                        android:textSize="14sp"
+                        android:textColor="#7F8C8D"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_columnWeight="1"
+                        android:text="Ju"
+                        android:gravity="center"
+                        android:textSize="14sp"
+                        android:textColor="#7F8C8D"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_columnWeight="1"
+                        android:text="Vi"
+                        android:gravity="center"
+                        android:textSize="14sp"
+                        android:textColor="#7F8C8D"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_columnWeight="1"
+                        android:text="Sa"
+                        android:gravity="center"
+                        android:textSize="14sp"
+                        android:textColor="#7F8C8D"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_columnWeight="1"
+                        android:text="Do"
+                        android:gravity="center"
+                        android:textSize="14sp"
+                        android:textColor="#E74C3C"
+                        android:textStyle="bold" />
+
+                </GridLayout>
+
+                <!-- Grid de días (ejemplo estático) -->
+                <GridLayout
+                    android:id="@+id/gridDays"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:columnCount="7"
+                    android:rowCount="5">
+
+                    <!-- Días de ejemplo - esto se llenará dinámicamente en el código -->
+                    <!-- 22, 23, 24, 25, 26, 27, 28 -->
+
+                </GridLayout>
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Horarios Disponibles -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Horarios Disponibles"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#2C3E50"
+            android:layout_marginBottom="12dp" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="@color/white"
+
+            app:cardCornerRadius="8dp"
+            app:cardElevation="2dp"
+            android:layout_marginBottom="24dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <RadioGroup
+                    android:id="@+id/radioGroupHorarios"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/cardHorario1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:cardCornerRadius="8dp"
+                        app:cardBackgroundColor="@color/white"
+
+                        app:cardElevation="1dp"
+                        android:layout_marginBottom="8dp"
+                        android:clickable="true"
+                        android:focusable="true">
+
+                        <RadioButton
+                            android:id="@+id/rbHorario1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="10:00 - 12:00"
+                            android:textSize="16sp"
+                            android:padding="16dp"
+                            android:buttonTint="#3498DB" />
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/cardHorario2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:cardCornerRadius="8dp"
+                        app:cardElevation="1dp"
+                        app:cardBackgroundColor="@color/white"
+
+                        android:layout_marginBottom="8dp"
+                        android:clickable="true"
+                        android:focusable="true">
+
+                        <RadioButton
+                            android:id="@+id/rbHorario2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="12:00 - 14:00"
+                            android:textSize="16sp"
+                            android:padding="16dp"
+                            android:buttonTint="#3498DB" />
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/cardHorario3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:cardCornerRadius="8dp"
+                        app:cardBackgroundColor="@color/white"
+
+                        app:cardElevation="1dp"
+                        android:clickable="true"
+                        android:focusable="true">
+
+                        <RadioButton
+                            android:id="@+id/rbHorario3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="16:00 - 18:00"
+                            android:textSize="16sp"
+                            android:padding="16dp"
+                            android:buttonTint="#3498DB" />
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                </RadioGroup>
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Botón Confirmar Reserva -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnConfirmarReserva"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="Confirmar Reserva"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            app:cornerRadius="8dp"
+            android:backgroundTint="#2C3E50" />
+
+        <!-- Espacio inferior -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="24dp" />
+
+    </LinearLayout>
+
+</ScrollView>
