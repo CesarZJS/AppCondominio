@@ -40,7 +40,6 @@ class ReservasFragment : Fragment() {
         cardPiscina = view.findViewById(R.id.cardPiscina)
         cardBBQ = view.findViewById(R.id.cardBBQ)
         cardSalon = view.findViewById(R.id.cardSalon)
-        radioGroupHorarios = view.findViewById(R.id.radioGroupHorarios)
         btnConfirmar = view.findViewById(R.id.btnConfirmarReserva)
     }
 

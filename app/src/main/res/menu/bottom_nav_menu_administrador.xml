@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/navigation_home"
+        android:icon="@drawable/ic_home"
+        android:title="Inicio" />
+    <item
+        android:id="@+id/navigation_pagos"
+        android:icon="@drawable/ic_pagos"
+        android:title="Pagos" />
+
+    <item
+        android:id="@+id/navigation_configuracion"
+        android:icon="@drawable/ic_configuracion"
+        android:title="Configuración" />
+
+    <item
+        android:id="@+id/navigation_mantenimiento"
+        android:icon="@drawable/ic_mantenimiento"
+        android:title="Mantenimiento" />
+
+
+    <item
+        android:id="@+id/navigation_validacion"
+        android:icon="@drawable/ic_validacion"
+        android:title="Validacion" />
+</menu>

@@ -1,5 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+        <!-- Colores principales -->
+        <color name="primary">#1976D2</color>        <!-- Azul medio -->
+        <color name="primaryDark">#0D47A1</color>    <!-- Azul oscuro -->
+        <color name="primaryLight">#42A5F5</color>   <!-- Azul claro -->
+        <color name="accent">#FF9800</color>         <!-- Naranja para acentos -->
+
+        <!-- Colores de fondo y superficie -->
+        <color name="background">#F5F5F5</color>     <!-- Gris muy claro -->
+        <color name="surface">#FFFFFF</color>        <!-- Blanco -->
+
+        <!-- Colores de texto -->
+        <color name="textPrimary">#212121</color>    <!-- Gris oscuro -->
+        <color name="textSecondary">#757575</color>  <!-- Gris medio -->
+
+        <!-- Estados de error -->
+        <color name="error">#D32F2F</color>          <!-- Rojo -->
+
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="bottom_nav_color">#1E3A8A</color>

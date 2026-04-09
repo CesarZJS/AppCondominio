@@ -3,7 +3,8 @@
     <item
         android:id="@+id/navigation_home"
         android:icon="@drawable/ic_home"
-        android:title="Inicio" />
+        android:title="Inicio"
+        />
     <item
         android:id="@+id/navigation_pagos"
         android:icon="@drawable/ic_pagos"
@@ -16,8 +17,9 @@
         android:id="@+id/navigation_comunicados"
         android:icon="@drawable/ic_comunicados"
         android:title="Comunicados" />
+
     <item
-        android:id="@+id/navigation_perfil"
-        android:icon="@drawable/ic_perfil"
-        android:title="Perfil" />
+        android:id="@+id/navigation_validacion"
+        android:icon="@drawable/ic_validacion"
+        android:title="Validacion" />
 </menu>

@@ -11,6 +11,7 @@ android {
         }
     }
 
+
     defaultConfig {
         applicationId = "com.example.appcondominio"
         minSdk = 24
@@ -37,6 +38,11 @@ android {
     kotlinOptions {
         jvmTarget = "11"
     }
+    buildFeatures{
+        viewBinding = true
+
+    }
+
 }
 
 dependencies {
