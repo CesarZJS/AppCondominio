@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Fondo degradado: Verde esmeralda → Azul marino -->
+    <item>
+        <shape>
+            <gradient
+                android:startColor="#134E5E"
+                android:endColor="#71B280"
+                android:angle="135" />
+        </shape>
+    </item>
+
+    <!-- Círculo grande 1 -->
+    <item
+        android:top="-100dp"
+        android:left="-100dp">
+        <shape>
+            <oval>
+                <solid android:color="#30FFFFFF" />
+            </oval>
+            <size
+                android:width="350dp"
+                android:height="350dp" />
+        </shape>
+    </item>
+
+    <!-- Círculo grande 2 -->
+    <item
+        android:bottom="-80dp"
+        android:right="-80dp">
+        <shape>
+            <oval>
+                <solid android:color="#20E8F4F8" />
+            </oval>
+            <size
+                android:width="300dp"
+                android:height="300dp" />
+        </shape>
+    </item>
+</layer-list>

@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Fondo con círculos decorativos -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_circles" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:paddingTop="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <!-- Título -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="24dp">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Validación"
+                        android:textSize="28sp"
+                        android:textStyle="bold"
+                        android:textColor="#FFFFFF"
+                        android:shadowColor="#20000000"
+                        android:shadowDx="2"
+                        android:shadowDy="2"
+                        android:shadowRadius="4" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Acceso a Áreas Comunes"
+                        android:textSize="18sp"
+                        android:textColor="#CCFFFFFF" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Card de selección de torre y departamento -->
+            <!-- Card de selección de torre y departamento -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="24dp"
+                app:cardElevation="8dp"
+                app:cardBackgroundColor="#FFFFFF"
+                android:layout_marginBottom="20dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Seleccionar Propietario"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:textColor="#2C3E50"
+                        android:layout_marginBottom="16dp" />
+
+                    <!-- Spinner para torres -->
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Seleccionar Torre"
+                        style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                        android:layout_marginBottom="16dp">
+
+                        <androidx.appcompat.widget.AppCompatSpinner
+                            android:id="@+id/spinnerTorre"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:entries="@array/torres_array" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <!-- Campo de texto para departamento -->
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Número de Departamento"
+                        style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                        android:layout_marginBottom="16dp">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etDepartamento"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="number"
+                            android:text="101" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <!-- Botón cargar -->
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnCargar"
+                        android:layout_width="match_parent"
+                        android:layout_height="56dp"
+                        android:text="Cargar Propietario"
+                        android:textAllCaps="false"
+                        app:cornerRadius="28dp"
+                        android:backgroundTint="#0D6790" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+            <!-- Card de información del propietario -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardPropietario"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="24dp"
+                app:cardElevation="8dp"
+                app:cardBackgroundColor="#FFFFFF"
+                android:visibility="gone"
+                android:layout_marginBottom="20dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="16dp">
+
+                        <ImageView
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:src="@drawable/ic_inquilino"
+                            android:tint="#0D6790" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:layout_marginStart="12dp">
+
+                            <TextView
+                                android:id="@+id/txtNombrePropietario"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Juan Pérez"
+                                android:textSize="18sp"
+                                android:textStyle="bold"
+                                android:textColor="#1E3A5F" />
+
+                            <TextView
+                                android:id="@+id/txtTorreDepto"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Torre A - Depto 101"
+                                android:textSize="14sp"
+                                android:textColor="#666666" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#E0E0E0"
+                        android:layout_marginVertical="12dp" />
+
+                    <!-- Nivel de acceso -->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Nivel de Acceso"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:textColor="#0D6790"
+                        android:layout_marginBottom="12dp" />
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:cardCornerRadius="16dp"
+                        app:cardElevation="2dp"
+                        android:layout_marginBottom="20dp">
+
+                        <RadioGroup
+                            android:id="@+id/rgNivelAcceso"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="12dp">
+
+                            <RadioButton
+                                android:id="@+id/rbTotal"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Acceso Total"
+                                android:textSize="14sp"
+                                android:padding="8dp" />
+
+                            <RadioButton
+                                android:id="@+id/rbParcial"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="⚠Acceso Parcial"
+                                android:textSize="14sp"
+                                android:padding="8dp" />
+
+                            <RadioButton
+                                android:id="@+id/rbNinguno"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="❌ Sin Acceso"
+                                android:textSize="14sp"
+                                android:padding="8dp" />
+                        </RadioGroup>
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <!-- Selección de áreas (solo visible si es Acceso Parcial) -->
+                    <TextView
+                        android:id="@+id/txtSeleccionAreas"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Áreas Permitidas"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:textColor="#0D6790"
+                        android:layout_marginBottom="12dp"
+                        android:visibility="gone" />
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/cardSeleccionAreas"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:cardCornerRadius="16dp"
+                        app:cardElevation="2dp"
+                        android:visibility="gone"
+                        android:layout_marginBottom="20dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="12dp">
+
+                            <CheckBox
+                                android:id="@+id/chkPiscina"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="🏊 Piscina"
+                                android:padding="8dp" />
+
+                            <CheckBox
+                                android:id="@+id/chkGimnasio"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="💪 Gimnasio"
+                                android:padding="8dp" />
+
+                            <CheckBox
+                                android:id="@+id/chkSalonEventos"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="🎉 Salón de Eventos"
+                                android:padding="8dp" />
+
+                            <CheckBox
+                                android:id="@+id/chkAreaInfantil"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="👶 Área Infantil"
+                                android:padding="8dp" />
+
+                            <CheckBox
+                                android:id="@+id/chkBBQ"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="🍖 Área BBQ"
+                                android:padding="8dp" />
+
+                            <CheckBox
+                                android:id="@+id/chkJardines"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="🌳 Jardines"
+                                android:padding="8dp" />
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <!-- Botón guardar -->
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnGuardar"
+                        android:layout_width="match_parent"
+                        android:layout_height="56dp"
+                        android:text="Guardar"
+                        android:textAllCaps="false"
+                        app:cornerRadius="28dp"
+                        android:backgroundTint="#4CAF50" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Mensaje sin resultados -->
+            <TextView
+                android:id="@+id/txtSinResultados"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="🏢 Selecciona una torre y un departamento"
+                android:textSize="16sp"
+                android:textColor="#FFFFFF"
+                android:gravity="center"
+                android:visibility="gone"
+                android:background="#80FFFFFF"
+                android:padding="32dp" />
+
+        </LinearLayout>
+    </ScrollView>
+</FrameLayout>
