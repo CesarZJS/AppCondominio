@@ -51,6 +51,7 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+
     private fun setupBottomNavigation(bottomNavigation: BottomNavigationView) {
         bottomNavigation.setOnItemSelectedListener { item ->
             when (item.itemId) {
