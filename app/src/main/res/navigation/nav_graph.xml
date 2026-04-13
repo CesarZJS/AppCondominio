@@ -34,4 +34,5 @@
         android:name="com.example.appcondominio.ui.fragment.PerfilFragment"
         android:label="Perfil"
         tools:layout="@layout/fragment_perfil" />
+
 </navigation>

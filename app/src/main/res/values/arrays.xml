@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="torres_array">
+        <item>Seleccionar Torre</item>
+        <item>Torre A</item>
+        <item>Torre B</item>
+        <item>Torre C</item>
+        <item>Torre D</item>
+        <item>Torre E</item>
+    </string-array>
+
+    <string-array name="areas_comunes_array">
+        <item>Seleccionar Área Común</item>
+        <item>Piscina</item>
+        <item>Gimnasio</item>
+        <item>Salón de Eventos</item>
+        <item>Área Infantil</item>
+        <item>Jardines</item>
+        <item>Área BBQ</item>
+        <item>🅿Estacionamiento</item>
+        <item>Sala de Lectura</item>
+    </string-array>
+
+    <string-array name="periodicidad_array">
+        <item>Mensual</item>
+        <item>Bimestral</item>
+        <item>Trimestral</item>
+        <item>Semestral</item>
+        <item>Anual</item>
+        <item>Único</item>
+    </string-array>
+</resources>

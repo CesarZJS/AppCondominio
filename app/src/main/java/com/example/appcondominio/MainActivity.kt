@@ -72,7 +72,17 @@ class MainActivity : AppCompatActivity() {
                 }
                 R.id.navigation_configuracion -> {
                     // Solo administrador tiene este ítem
-                    loadFragment(AdminConfiguracionFragment())
+                    loadFragment(getFragmentForMenu(R.id.navigation_configuracion))
+                    true
+                }
+                R.id.navigation_validacion -> {
+                    // Solo administrador tiene este ítem
+                    loadFragment(getFragmentForMenu(R.id.navigation_validacion))
+                    true
+                }
+                R.id.navigation_mantenimiento -> {
+                    // Solo administrador tiene este ítem
+                    loadFragment(getFragmentForMenu(R.id.navigation_mantenimiento))
                     true
                 }
                 R.id.navigation_perfil -> {
@@ -117,13 +127,12 @@ class MainActivity : AppCompatActivity() {
             }
             IniciarRolActivity.ROLE_ADMINISTRADOR -> {
                 when (menuId) {
-                    R.id.navigation_home -> AdminHomeFragment()
-//                    R.id.navigation_pagos -> AdminPagosFragment()
-//                    R.id.navigation_reservas -> AdminReservasFragment()
-//                    R.id.navigation_comunicados -> AdminComunicadosFragment()
+                    R.id.navigation_home -> AdminInicioFragment()
+                    R.id.navigation_pagos -> AdminPagosFragment()
+                    R.id.navigation_validacion -> AdminValidacionFragment()
+                    R.id.navigation_mantenimiento -> AdminMantFragment()
                     R.id.navigation_configuracion -> AdminConfiguracionFragment()
-//                    R.id.navigation_perfil -> AdminPerfilFragment()
-                    else -> AdminHomeFragment()
+                    else -> AdminInicioFragment()
                 }
             }
             else -> {
